@@ -1,7 +1,19 @@
-## Workshop Starship Enterprise
+# Building the Starship Enterprise Computer Today
 
-Sample code for a Starship
+Nearly every science fiction story has shown us that voice interfaces are the future. This workshop will show you how to make that science fiction a reality. Building this skill will teach you the advanced topics required for creating compelling voice interfaces. You will learn how to build Alexa skills, how to design conversational experiences, and how to amplify your brand and monetize your best content.
 
-## License
+A user opens the skill and selects what area of the space ship they would like to command. Alexa responds to their commands accordingly, updating displays and featuring advanced SSML design and Amazon Polly. 
 
-This library is licensed under the Amazon Software License.
+## Overview
+
+This workshop is split into 5 sections. Each section builds off the previous, and gets more advanced per step:
+
+- [**Step 0 - Initialize Your Ship Commander**](): You will create and configure the Ship Commander skill using the Alexa Skills Kit SDK in NodeJS and Alexa Hosted. When launched, this Alexa skill will have the customer interact with a space ship that features a simple voice interaction and using session attributes.
+
+- [**Step 1 - Add SSML, Sound Effects, and Amazon Polly**](): In every interaction of your skill, you will create a more immersive experience for your customer by integrating SSML, Sound Effects, and Amazon Polly to the voice responses.
+
+- [**Step 2 - Build your Display**]( ): With APL, you can develop visual templates for skills formatted anyway you'd like. You will allow customers to interact with their multimodal device screens and the skill.
+
+- [**Step 3 - Pairing your VUI and GUI**]( ): It is important to maintain a voice-first experience in your skill. You will learn how to accommodate devices with and without a screen while integrating your displays.
+
+- [**Step 4 - Make Money with In-Skill Purchasing**]( ): Your customer will be able to purchase premium content within your skill, making their experience more delightful and surprising.
