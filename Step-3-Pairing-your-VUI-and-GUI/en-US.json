@@ -1,0 +1,107 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ship commander",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnalyzeShipStatusIntent",
+                    "slots": [],
+                    "samples": [
+                        "analyze the ship status",
+                        "analyze status",
+                        "check on the ship status",
+                        "tell me about the ship status",
+                        "what is happening on the ship",
+                        "engage ship status"
+                    ]
+                },
+                {
+                    "name": "AttackIntent",
+                    "slots": [],
+                    "samples": [
+                        "attack",
+                        "attack the enemy",
+                        "send an attack",
+                        "start attacking",
+                        "shoot the shot"
+                    ]
+                },
+                {
+                    "name": "BeamMeUpIntent",
+                    "slots": [],
+                    "samples": [
+                        "beam",
+                        "beam me up",
+                        "beam me up scotty",
+                        "beam us up",
+                        "beam me into the nebula",
+                        "beam us to nebula"
+                    ]
+                },
+                {
+                    "name": "SetHyperDriveIntent",
+                    "slots": [],
+                    "samples": [
+                        "hyper drive",
+                        "hyper drive to warp speed",
+                        "set hyper drive",
+                        "turn on hyper drive",
+                        "set hyper to warp",
+                        "set hyperdrive",
+                        "hyperdrive"
+                    ]
+                },
+                {
+                    "name": "CaptainsLogIntent",
+                    "slots": [],
+                    "samples": [
+                        "read the captains log",
+                        "check the captain log",
+                        "captain logs",
+                        "read the log",
+                        "check on the log"
+                    ]
+                },
+                {
+                    "name": "DefendIntent",
+                    "slots": [],
+                    "samples": [
+                        "defend",
+                        "defend the ship",
+                        "defend the rocket",
+                        "turn on the shields",
+                        "engage the shield"
+                    ]
+                },
+                {
+                    "name": "ReturnHomeIntent",
+                    "slots": [],
+                    "samples": [
+                        "go home",
+                        "return home",
+                        "back to normal",
+                        "get me home",
+                        "take me home"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}

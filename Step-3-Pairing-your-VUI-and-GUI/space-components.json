@@ -1,0 +1,261 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+          "name": "alexa-layouts",
+          "version": "1.0.0"
+        }
+    ],
+    "resources": [
+        {
+            "description": "Colors",
+            "colors": {
+                "myYellow": "#E5CE3F",
+                "myRed": "#E53F56",
+                "myOrange": "#E57B3F",
+                "myGreen": "#56E53F",
+                "myBlue": "#3FA9E5",
+                "myTeal": "#3FE5CE",
+                "myPink": "#E53FA9",
+                "myPurple": "#CE3FE5",
+                "myNavy": "#0E032F",
+                "myWhite": "#FDFDFD",
+                "myLightGray": "#DFE3E9",
+                "myGray": "#BCBEC8",
+                "myDarkGray": "#9295A5"
+            }
+        }
+    ],
+    "styles": {},
+    "layouts": {
+        "Windows": {
+            "parameters": [],
+            "items": [
+                {
+                    "type": "Container",
+                    "width": "100vw",
+                    "height": "100vh",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "100vw",
+                            "height": "100vh",
+                            "borderColor": "@myDarkGray",
+                            "borderWidth": "2vw"
+                        },
+                        {
+                            "type": "Container",
+                            "width": "100vw",
+                            "height": "100vh",
+                            "position": "absolute",
+                            "direction": "row",
+                            "items": [
+                                {
+                                    "type": "Frame",
+                                    "width": "20vw",
+                                    "height": "100vh",
+                                    "borderColor": "@myGray",
+                                    "borderWidth": "1vw"
+                                },
+                                {
+                                    "type": "Frame",
+                                    "width": "60vw",
+                                    "height": "100vh",
+                                    "borderColor": "@myLightGray",
+                                    "borderWidth": "1.5vw"
+                                },
+                                {
+                                    "type": "Frame",
+                                    "width": "20vw",
+                                    "height": "100vh",
+                                    "borderColor": "@myGray",
+                                    "borderWidth": "1vw"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "ControlPanel": {
+            "parameters": [],
+            "items": [
+                {
+                    "type": "Container",
+                    "width": "100vw",
+                    "height": "100vh",
+                    "direction": "row",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "15vw",
+                            "height": "40vh",
+                            "borderColor": "@myWhite",
+                            "backgroundColor": "@myLightGray",
+                            "borderWidth": "1vh"
+                        },
+                        {
+                            "type": "Container",
+                            "width": "70vw",
+                            "height": "40vh",
+                            "items": [
+                                {
+                                    "type": "Frame",
+                                    "width": "70vw",
+                                    "height": "10vh"
+                                },
+                                {
+                                    "type": "Frame",
+                                    "width": "70vw",
+                                    "height": "30vh",
+                                    "borderColor": "@myWhite",
+                                    "backgroundColor": "@myGray",
+                                    "borderWidth": "1vh"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Frame",
+                            "width": "15vw",
+                            "height": "40vh",
+                            "borderColor": "@myWhite",
+                            "backgroundColor": "@myLightGray",
+                            "borderWidth": "1vh"
+                        }
+                    ]
+                }
+            ]
+        },
+        "SmallButton": {
+            "parameters": [
+                "title",
+                "color",
+                "arguments"
+            ],
+            "items": [
+                {
+                    "type": "TouchWrapper",
+                    "width": "11.5vw",
+                    "height": "7vh",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "11.5vw",
+                            "height": "7vh",
+                            "backgroundColor": "black",
+                            "borderColor": "${color}",
+                            "borderWidth": "1vh",
+                            "borderRadius": "1vw",
+                            "item": {
+                                "type": "Text",
+                                "text": "${title}",
+                                "fontSize": "3vh",
+                                "paddingLeft": "1vw",
+                                "paddingRight": "1vw",
+                                "color": "${color}",
+                                "width": "11.5vw",
+                                "height": "7vh",
+                                "textAlign": "center",
+                                "textAlignVertical": "center"
+                            }
+                        }
+                    ],
+                    "onPress": {
+                        "type": "SendEvent",
+                        "arguments": [
+                            "${arguments}"
+                        ]
+                    }
+                }
+            ]
+        },
+        "MediumButton": {
+            "parameters": [
+                "title",
+                "color",
+                "arguments"
+            ],
+            "items": [
+                {
+                    "type": "TouchWrapper",
+                    "width": "11.5vw",
+                    "height": "20vh",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "11.5vw",
+                            "height": "20vh",
+                            "backgroundColor": "black",
+                            "borderColor": "${color}",
+                            "borderWidth": "1vh",
+                            "borderRadius": "1vw",
+                            "item": {
+                                "type": "Text",
+                                "text": "${title}",
+                                "fontSize": "3vh",
+                                "paddingLeft": "1vw",
+                                "paddingRight": "1vw",
+                                "color": "${color}",
+                                "width": "11.5vw",
+                                "height": "20vh",
+                                "textAlign": "center",
+                                "textAlignVertical": "center"
+                            }
+                        }
+                    ],
+                    "onPress": {
+                        "type": "SendEvent",
+                        "arguments": [
+                            "${arguments}"
+                        ]
+                    }
+                }
+            ]
+        },
+        "LargeButton": {
+            "parameters": [
+                "title",
+                "color",
+                "arguments"
+            ],
+            "items": [
+                {
+                    "type": "TouchWrapper",
+                    "width": "20vw",
+                    "height": "14vh",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "20vw",
+                            "height": "14vh",
+                            "backgroundColor": "black",
+                            "borderColor": "${color}",
+                            "borderWidth": "1vh",
+                            "borderRadius": "1vw",
+                            "item": {
+                                "type": "Text",
+                                "text": "${title}",
+                                "fontSize": "3vh",
+                                "paddingLeft": "1vw",
+                                "paddingRight": "1vw",
+                                "color": "${color}",
+                                "width": "20vw",
+                                "height": "14vh",
+                                "textAlign": "center",
+                                "textAlignVertical": "center"
+                            }
+                        }
+                    ],
+                    "onPress": {
+                        "type": "SendEvent",
+                        "arguments": [
+                            "${arguments}"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,185 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+          "name": "alexa-layouts",
+          "version": "1.0.0"
+        },
+        {
+            "name": "space-components",
+            "version": "1.0",
+            "source": "https://ask-samples-resources.s3.amazonaws.com/workshop-starship-enterprise/components/space-components.json"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "alignItems": "center",
+                "items": [
+                    {
+                        "type": "Video",
+                        "id": "myVideoPlayer",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "scale": "best-fill",
+                        "autoplay": true,
+                        "source": "${payload.shipCommanderData.properties.video}",
+                        "repeatCount": -1
+                    },
+                    {
+                        "when": "${viewport.shape == 'round'}",
+                        "type": "AlexaTransportControls",
+                        "mediaComponentId": "myVideoPlayer",
+                        "primaryControlSize": "5vw",
+                        "secondaryControlSize": "5vw",
+                        "autoplay": "true",
+                        "position": "absolute"
+                    },
+                    {
+                        "when": "${viewport.shape != 'round'}",
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "alignItems": "center",
+                        "position": "absolute",
+                        "items": [
+                            {
+                                "type": "Windows"
+                            },
+                            {
+                                "type": "ControlPanel",
+                                "position": "absolute",
+                                "top": "60vh"
+                            },
+                            {
+                                "type": "Container",
+                                "width": "11.5vw",
+                                "height": "30vh",
+                                "position": "absolute",
+                                "top": "65vh",
+                                "left": "2vw",
+                                "items": [
+                                    {
+                                        "type": "MediumButton",
+                                        "title": "Analyze Ship Status",
+                                        "color": "@myBlue",
+                                        "arguments": "analyze"
+                                    },
+                                    {
+                                        "type": "SmallButton",
+                                        "title": "Defend",
+                                        "color": "@myOrange",
+                                        "arguments": "defend",
+                                        "position": "absolute",
+                                        "top": "22vh"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "width": "65vw",
+                                "height": "40vh",
+                                "position": "absolute",
+                                "top": "64vh",
+                                "alignItems": "center",
+                                "justifyContent": "center",
+                                "items": [
+                                    {
+                                        "type": "Container",
+                                        "width": "65vw",
+                                        "height": "20vh",
+                                        "alignItems": "center",
+                                        "justifyContent": "center",
+                                        "direction": "row",
+                                        "items": [
+                                            {
+                                                "type": "LargeButton",
+                                                "title": "Beam us into the Nebula",
+                                                "color": "@myYellow",
+                                                "arguments": "beam",
+                                                "position": "absolute",
+                                                "left": "0vw"
+                                            },
+                                            {
+                                                "type": "LargeButton",
+                                                "title": "Return to Home",
+                                                "color": "@myTeal",
+                                                "arguments": "home"
+                                            },
+                                            {
+                                                "type": "LargeButton",
+                                                "title": "Set Hyperdrive to Warp Speed",
+                                                "color": "@myPink",
+                                                "arguments": "warp",
+                                                "position": "absolute",
+                                                "right": "0vw"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Frame",
+                                        "width": "65vw",
+                                        "height": "5vh",
+                                        "backgroundColor": "@myNavy",
+                                        "borderRadius": "1vw",
+                                        "item": {
+                                            "type": "Container",
+                                            "width": "65vw",
+                                            "height": "5vh",
+                                            "alignItems": "center",
+                                            "justifyContent": "center",
+                                            "items": [
+                                                {
+                                                    "type": "AlexaTransportControls",
+                                                    "mediaComponentId": "myVideoPlayer",
+                                                    "primaryControlSize": "2vw",
+                                                    "secondaryControlSize": "2vw",
+                                                    "autoplay": "true"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "width": "11.5vw",
+                                "height": "30vh",
+                                "position": "absolute",
+                                "top": "65vh",
+                                "left": "87vw",
+                                "items": [
+                                    {
+                                        "type": "MediumButton",
+                                        "title": "Check the Captain's Log",
+                                        "color": "@myGreen",
+                                        "arguments": "checkLog"
+                                    },
+                                    {
+                                        "type": "SmallButton",
+                                        "title": "Attack",
+                                        "color": "@myRed",
+                                        "arguments": "attack",
+                                        "position": "absolute",
+                                        "top": "22vh"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
