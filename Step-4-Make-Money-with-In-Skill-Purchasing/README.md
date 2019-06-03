@@ -348,14 +348,14 @@ exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
     AnalyzeShipStatusIntentHandler,
-    FactIntentHandler,
-    BuyAndUpsellResponseHandler,
-    BuyIntentHandler,
     AttackIntentHandler,
     BeamMeUpIntentHandler,
     SetHyperDriveIntentHandler,
     CaptainsLogIntentHandler,
     DefendIntentHandler,
+    FactIntentHandler,
+    BuyAndUpsellResponseHandler,
+    BuyIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
