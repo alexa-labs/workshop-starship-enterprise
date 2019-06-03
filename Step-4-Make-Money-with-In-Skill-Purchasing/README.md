@@ -18,10 +18,10 @@ This lab requires:
 
 - Access to a notebook computer with Wi-Fi, running Microsoft Windows, Mac OSX, or Linux (Ubuntu, SuSE, or RedHat).
 - An Internet browser such as Chrome, Firefox, or IE9 (previous versions of Internet Explorer are not supported).
-- Having completed **[Step 0: Initialize Ship Commander]( )**
-- Having completed **[Step 1: Add SSML, Sound Effects, and Amazon Polly]( )**
-- Having completed **[Step 2: Build your Display]( )**
-- Having completed **[Step 3: Pairing your VUI and GUI]( )**
+- Having completed **[Step 0: Initialize Ship Commander](../Step-0-Initialize-your-Ship-Commander)**
+- Having completed **[Step 1: Add SSML, Sound Effects, and Amazon Polly](../Step-1-Add-SSML-Sound-Effects-and-Amazon-Polly )**
+- Having completed **[Step 2: Build your Display](../Step-2-Build-your-Display)**
+- Having completed **[Step 3: Pairing your VUI and GUI](../Step-3-Pairing-your-VUI-and-GUI)**
 
 ## Goal: Integrating Premium Features into your skill
 ISP supports one-time purchases for entitlements that unlock access to features or content in your skill, subscriptions that offer access to premium features or content for a period of time, and consumables which can be purchased, depleted and purchased again.
