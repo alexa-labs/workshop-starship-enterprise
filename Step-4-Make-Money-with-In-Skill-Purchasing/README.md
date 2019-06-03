@@ -339,6 +339,33 @@ Notice how the returned response is just a normal speech response, indicating we
 We have now finished our intent handers for the ISP flow within our skill. We need to add these intents to our skill request handler.
 
 12. **Add** `BuyIntentHandler` and `BuyAndUpsellResponseHandler` to your **RequestHandler** builder.
+13. Add `.withApiClient(new Alexa.DefaultApiClient())´ to you **RequestHandler** Builder, it must look like the code below:
+
+```
+const skillBuilder = Alexa.SkillBuilders.custom();
+
+exports.handler = skillBuilder
+  .addRequestHandlers(
+    LaunchRequestHandler,
+    AnalyzeShipStatusIntentHandler,
+    FactIntentHandler,
+    BuyAndUpsellResponseHandler,
+    BuyIntentHandler,
+    AttackIntentHandler,
+    BeamMeUpIntentHandler,
+    SetHyperDriveIntentHandler,
+    CaptainsLogIntentHandler,
+    DefendIntentHandler,
+    HelpIntentHandler,
+    CancelAndStopIntentHandler,
+    SessionEndedRequestHandler
+  )
+  .addErrorHandlers(ErrorHandler)
+  .withApiClient(new Alexa.DefaultApiClient())
+  .lambda();
+
+```
+
 13. **Save and deploy** your code. 
 
 ### Task 4.5: Test that the ISP works in your skill
