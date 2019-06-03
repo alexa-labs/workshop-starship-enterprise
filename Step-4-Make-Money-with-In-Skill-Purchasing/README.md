@@ -145,23 +145,20 @@ Now we are going to add In-Skill purchasing into our skill. This will allow a cu
 5. Assure that **One-Time Purchase** is selected as the product type.
 6. Click the blue **Create In-Skill Product** button.
 7. Under **Supported Languages** section, click on "+ Add new language" and select "English (US)"
-7. Fill all the metadata fields for `fact_pack` as follows:
+8. Fill all the metadata fields for `fact_pack` as follows:
 	- **Display Name:** Fact Pack
 	- **One Sentence Description:** Fact pack for the Ship Commander skill
 	- **Detailed Description:** Unlock the fact pack to hear a random fact about Space.
-	- **Example Phrases:** Tell me a fact, Give me a random fact
 	- **Icons:** Use the [Alexa Icon Builder](https://developer.amazon.com/docs/tools/icon-builder.html) to make the icons for your product, and upload each size appropriately
-	- **Keywords:** fact, facts, random
 	- **Purchase Prompt Description:** The fact pack includes multiple facts from the Premium Space Facts Selection.
 	- **Purchase confirmation description:** Purchase the fact pack?
 	- **Privacy policy URL:** [https://privacy.com](https://privacy.com)
-8. Click the **Save and Continue** button.
-9. **Select a price** for your product (default is $0.99).
-10. Assure the **Release Date** set to today.
+9. Click the **Save and Continue** button.
+10. Select "Amazon.com" and **Select a price** for your product (default is $0.99).
 11. Set the **Tax Category** for your product to "Information Services".
 12. Click the **Save and Continue** button.
 13. For **Testing Instructions**, insert your example phrases: Tell me a fact, Give me a fact.
-14. Click the **Save and Finish** button.
+14. SCroll to the top and click the **Save** button.
 15. You will see a prompt - “Link fact_pack to your skill?” - Click on **Link to skill**.
 
 ### Task 4.4: Add ISP into your service
