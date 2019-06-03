@@ -16,9 +16,9 @@ This lab requires:
 
 - Access to a notebook computer with Wi-Fi, running Microsoft Windows, Mac OSX, or Linux (Ubuntu, SuSE, or RedHat).
 - An Internet browser suchas Chrome, Firefox, or IE9 (previous versions of Internet Explorer are not supported).
-- Having completed **[Step 0: Initialize Ship Commander]( )**
-- Having completed **[Step 1: Add SSML, Sound Effects, and Amazon Polly]( )**
-- Having completed **[Step 2: Build your Display]( )**
+- Having completed **[Step 0: Initialize Ship Commander](../Step-0-Initialize-your-Ship-Commander)**
+- Having completed **[Step 1: Add SSML, Sound Effects, and Amazon Polly](../Step-1-Add-SSML-Sound-Effects-and-Amazon-Polly )**
+- Having completed **[Step 2: Build your Display](../Step-2-Build-your-Display )**
 
 ## Goal: Create a visual experience to be paired with your voice user interface 
 Building voice user interfaces with APL borrows concepts you find in traditional web development, specifically with regards to styling, component nesting, and document hierarchy, but it also maintains security, scalability, and renderability across all Alexa-enabled devices.
