@@ -21,8 +21,8 @@ This lab requires:
 
 - Access to a notebook computer with Wi-Fi, running Microsoft Windows, Mac OSX, or Linux (Ubuntu, SuSE, or RedHat).
 - An Internet browser such as Chrome, Firefox, or IE9 (previous versions of Internet Explorer are not supported).
-- Having completed **[Step 0: Initialize Ship Commander]( )**
-- Having completed **[Step 1: Add SSML, Sound Effects, and Amazon Polly]( )**
+- Having completed **[Step 0: Initialize Ship Commander](../Step-0-Initialize-your-Ship-Commander)**
+- Having completed **[Step 1: Add SSML, Sound Effects, and Amazon Polly](../Step-1-Add-SSML-Sound-Effects-and-Amazon-Polly )**
 
 ## Goal: Create an enriching visual experience in your skill
 Voice is the most natural form of interaction. But in a voice-first world, visuals can enhance interactions with Alexa-enabled devices. By combining visual elements with voice experiences, developers can expand the possibilities of what their skills can do. Alexa-enabled devices have varying display sizes and shapes, purposes, and hardware limitations. For example, while using a skill on an Echo Spot or Fire TV may have similar spoken interactions for a customer, interactivity and information rendered on the screen may vary drastically depending on the device features.
