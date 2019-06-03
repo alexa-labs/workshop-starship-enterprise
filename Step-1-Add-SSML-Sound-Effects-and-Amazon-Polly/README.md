@@ -18,7 +18,7 @@ This lab requires:
 
 - Access to a notebook computer with Wi-Fi, running Microsoft Windows, Mac OSX, or Linux (Ubuntu, SuSE, or RedHat).
 - An Internet browser such as Chrome, Firefox, or IE9 (previous versions of Internet Explorer are not supported).
-- Having completed **[Step 0: Initialize Ship Commander]( )**
+- Having completed **[Step 0: Initialize Ship Commander](../Step-0-Initialize-your-Ship-Commander )**
 
 ## Goal: Creating immersive experiences
 When the service for your skill returns a response to a user's request, you provide text that the Alexa service converts to speech. Alexa automatically handles normal punctuation, such as pausing after a period, or speaking a sentence ending in a question mark as a question.
