@@ -1,4 +1,4 @@
-// Copyright <first-edit-year> Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // Licensed under the Amazon Software License
 // http://aws.amazon.com/asl/
 
@@ -24,22 +24,161 @@ const VIDEO_URLS = {
   "ReturnHome": "https://ask-samples-resources.s3.amazonaws.com/workshop-starship-enterprise/videos/space.mp4"
 };
 
+const BuyAndUpsellResponseHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'Connections.Response' &&
+      (handlerInput.requestEnvelope.request.name === 'Buy' ||
+        handlerInput.requestEnvelope.request.name === 'Upsell');
+  },
+  handle(handlerInput) {
+    console.log('IN: BuyResponseHandler.handle');
+
+    const locale = handlerInput.requestEnvelope.request.locale;
+    const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
+
+    return ms.getInSkillProducts(locale).then(function handlePurchaseResponse(res) {
+      let product = res.inSkillProducts.filter(record => record.referenceName == 'fact_pack');
+
+      if (handlerInput.requestEnvelope.request.status.code === '200') {
+        let speechOutput = "";
+
+        switch (handlerInput.requestEnvelope.request.payload.purchaseResult) {
+          case 'ACCEPTED':
+              speechOutput = "You have just purchased the ability to ask for facts. ";
+              break;
+          case 'DECLINED':
+              speechOutput = "You can purchase facts at anytime during the game. "
+              break;
+          case 'ALREADY_PURCHASED':
+              speechOutput = "You have just purchased the ability to ask for facts. ";
+              break;
+          default:
+              speechOutput = "Something unexpected happened, but thanks for your interest in the fact pack. ";
+              break;
+        }
+
+        return handlerInput.responseBuilder
+          .speak(speechOutput + DEFAULT_REPROMPT)
+          .reprompt(DEFAULT_REPROMPT)
+          .getResponse();
+      }
+
+      // Something failed.
+      console.log(`Connections.Response indicated failure. error: ${handlerInput.requestEnvelope.request.status.message}`);
+
+      return handlerInput.responseBuilder
+        .speak('There was an error handling your purchase request. Please try again or contact us for help.')
+        .getResponse();
+    });
+  },
+};
+
+const BuyIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+       handlerInput.requestEnvelope.request.intent.name === 'BuyIntent';
+  },
+  handle(handlerInput) {  
+    // Inform the user about what products are available for purchase
+    const locale = handlerInput.requestEnvelope.request.locale;
+    const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
+
+    return ms.getInSkillProducts(locale).then(function(res) {
+      let product = res.inSkillProducts.filter(record => record.referenceName == "fact_pack");
+
+      return handlerInput.responseBuilder
+        .addDirective({
+          'type': 'Connections.SendRequest',
+          'name': 'Buy',
+          'payload': {
+            'InSkillProduct': {
+              'productId': product[0].productId
+            }
+          },
+          'token': 'correlationToken'
+        })
+        .getResponse();
+    });
+  }
+};
+
+const FactIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'FactIntent';
+  },
+  handle(handlerInput) {
+    const locale = handlerInput.requestEnvelope.request.locale;
+    const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
+
+  return ms.getInSkillProducts(locale).then(function(res) {
+    var product = res.inSkillProducts.filter(record => record.referenceName == 'fact_pack');
+    
+    if (isEntitled(product)) {
+        let randomFact = FACTS.FACTS[getRandom.call(this, 0, FACTS.FACTS.length-1)];
+        let speechText = "<voice name='Amy'>Here is your random fact: "
+        + randomFact
+        + "</voice> ";
+
+        if (supportsAPL(handlerInput)) {
+            handlerInput.responseBuilder
+            .addDirective({
+                type: 'Alexa.Presentation.APL.RenderDocument',
+                document: require('./launch.json'),
+                datasources: {
+                    "shipCommanderData": {
+                        "properties": {
+                            "video": VIDEO_URLS['ReturnHome']
+                        }
+                    }
+                }
+            });
+        }
+
+        return handlerInput.responseBuilder
+        .speak(speechText)
+        .reprompt(DEFAULT_REPROMPT)
+        .withSimpleCard('Ship Commander', speechText)
+        .getResponse();
+    } else {
+        const upsellMessage = "You don't currently own the fact pack. Want to learn more about it?";
+  
+        return handlerInput.responseBuilder
+            .addDirective({
+                'type': 'Connections.SendRequest',
+                'name': 'Upsell',
+                'payload': {
+                    'InSkillProduct': {
+                    'productId': product[0].productId
+                },
+                'upsellMessage': upsellMessage
+            },
+            'token': 'correlationToken'
+        })
+        .getResponse();
+      
+    }
+  })
+}
+};
+
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest'
 
       || (handlerInput.requestEnvelope.request.type === 'IntentRequest'
         && handlerInput.requestEnvelope.request.intent.name === 'ReturnHomeIntent')
-
+        
       || (handlerInput.requestEnvelope.request.type === 'Alexa.Presentation.APL.UserEvent'
           && handlerInput.requestEnvelope.request.arguments.length > 0
           && handlerInput.requestEnvelope.request.arguments[0] === 'home');
+        
   },
   handle(handlerInput) {
     const speechText = "<audio src='https://ask-samples-resources.s3.amazonaws.com/workshop-starship-enterprise/sounds/launch.mp3'></audio>";
 
     if (supportsAPL(handlerInput)) {
-      handlerInput.responseBuilder
+        handlerInput.responseBuilder
         .addDirective({
             type: 'Alexa.Presentation.APL.RenderDocument',
             document: require('./launch.json'),
@@ -52,7 +191,7 @@ const LaunchRequestHandler = {
             }
         });
     }
-    
+
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(HELP)
@@ -90,7 +229,7 @@ const AnalyzeShipStatusIntentHandler = {
             }
         });
     }
-
+    
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(DEFAULT_REPROMPT)
@@ -128,7 +267,7 @@ const AttackIntentHandler = {
             }
         });
     }
-
+    
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(DEFAULT_REPROMPT)
@@ -166,7 +305,7 @@ const BeamMeUpIntentHandler = {
             }
         });
     }
-
+    
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(DEFAULT_REPROMPT)
@@ -231,7 +370,7 @@ const CaptainsLogIntentHandler = {
         + "<amazon:effect name='whispered'>I hope we will be safe.</amazon:effect>"
         + "Until next time.</voice>"
         + "<audio src='soundbank://soundlibrary/scifi/amzn_sfx_scifi_alien_voice_07'/>"
-    +"</speak>";
+        +"</speak>";
 
     if (supportsAPL(handlerInput)) {
       handlerInput.responseBuilder
@@ -283,148 +422,12 @@ const DefendIntentHandler = {
             }
         });
     }
-
+    
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(DEFAULT_REPROMPT)
       .withSimpleCard('Ship Commander', speechText)
       .getResponse();
-  },
-};
-
-const FactIntentHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'FactIntent';
-  },
-  handle(handlerInput) {
-    const locale = handlerInput.requestEnvelope.request.locale;
-    const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
-    return ms.getInSkillProducts(locale).then(function(res) {
-      var product = res.inSkillProducts.filter(record => record.referenceName == 'fact_pack');
-    
-      if (isEntitled(product)) {
-        let randomFact = getRandom.call(this, 0, FACTS.FACTS.length-1);
-        let speechText = "<voice name='Amy'>Here is your random fact: "
-          + randomFact;
-          + "</voice> ";
-
-        if (supportsAPL(handlerInput)) {
-          handlerInput.responseBuilder
-            .addDirective({
-                type: 'Alexa.Presentation.APL.RenderDocument',
-                document: require('./launch.json'),
-                datasources: {
-                  "shipCommanderData": {
-                    "properties": {
-                      "video": VIDEO_URLS['ReturnHome']
-                    }
-                  }
-                }
-            });
-        }
-
-        return handlerInput.responseBuilder
-          .speak(speechText)
-          .reprompt(DEFAULT_REPROMPT)
-          .withSimpleCard('Ship Commander', speechText)
-          .getResponse();
-      } else {
-        const upsellMessage = "You don't currently own the fact pack. Want to learn more about it?";
-  
-        return handlerInput.responseBuilder
-          .addDirective({
-            'type': 'Connections.SendRequest',
-            'name': 'Upsell',
-            'payload': {
-              'InSkillProduct': {
-                'productId': product[0].productId
-              },
-              'upsellMessage': upsellMessage
-            },
-            'token': 'correlationToken'
-          })
-          .getResponse();
-      }
-    });
-  }
-};
-
-const BuyIntentHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
-       handlerInput.requestEnvelope.request.intent.name === 'BuyIntent';
-  },
-  handle(handlerInput) {  
-    // Inform the user about what products are available for purchase
-    const locale = handlerInput.requestEnvelope.request.locale;
-    const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
-
-    return ms.getInSkillProducts(locale).then(function(res) {
-      let product = res.inSkillProducts.filter(record => record.referenceName == "fact_pack");
-
-      return handlerInput.responseBuilder
-        .addDirective({
-          'type': 'Connections.SendRequest',
-          'name': 'Buy',
-          'payload': {
-            'InSkillProduct': {
-              'productId': product[0].productId
-            }
-          },
-          'token': 'correlationToken'
-        })
-        .getResponse();
-    });
-  }
-};
-
-const BuyAndUpsellResponseHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'Connections.Response' &&
-      (handlerInput.requestEnvelope.request.name === 'Buy' ||
-        handlerInput.requestEnvelope.request.name === 'Upsell');
-  },
-  handle(handlerInput) {
-    console.log('IN: BuyResponseHandler.handle');
-
-    const locale = handlerInput.requestEnvelope.request.locale;
-    const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
-
-    return ms.getInSkillProducts(locale).then(function handlePurchaseResponse(res) {
-      let product = res.inSkillProducts.filter(record => record.referenceName == 'fact_pack');
-
-      if (handlerInput.requestEnvelope.request.status.code === '200') {
-        let speechOutput = "";
-
-        switch (handlerInput.requestEnvelope.request.payload.purchaseResult) {
-          case 'ACCEPTED':
-              speechOutput = "You have just purchased the ability to ask for facts. ";
-              break;
-          case 'DECLINED':
-              speakOutput = "You can purchase facts at anytime during the game. "
-              break;
-          case 'ALREADY_PURCHASED':
-              speechOutput = "You have just purchased the ability to ask for facts. ";
-              break;
-          default:
-              speechOutput = "Something unexpected happened, but thanks for your interest in the fact pack. ";
-              break;
-        }
-
-        return handlerInput.responseBuilder
-          .speak(speechOutput + DEFAULT_REPROMPT)
-          .reprompt(DEFAULT_REPROMPT)
-          .getResponse();
-      }
-
-      // Something failed.
-      console.log(`Connections.Response indicated failure. error: ${handlerInput.requestEnvelope.request.status.message}`);
-
-      return handlerInput.responseBuilder
-        .speak('There was an error handling your purchase request. Please try again or contact us for help.')
-        .getResponse();
-    });
   },
 };
 
@@ -434,6 +437,7 @@ const HelpIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
   },
   handle(handlerInput) {
+      
     if (supportsAPL(handlerInput)) {
       handlerInput.responseBuilder
         .addDirective({
@@ -448,7 +452,8 @@ const HelpIntentHandler = {
             }
         });
     }
-
+      
+      
     return handlerInput.responseBuilder
       .speak(HELP)
       .reprompt(HELP)
@@ -506,6 +511,14 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * (max-min+1)+min);
 }
 
+function isProduct(product) {
+  return product && product.length > 0;
+}
+
+function isEntitled(product) {
+  return isProduct(product) && product[0].entitled == 'ENTITLED';
+}
+
 const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
@@ -525,4 +538,6 @@ exports.handler = skillBuilder
     SessionEndedRequestHandler
   )
   .addErrorHandlers(ErrorHandler)
+  .withApiClient(new Alexa.DefaultApiClient())
   .lambda();
+ 
