@@ -144,6 +144,7 @@ Now we are going to add In-Skill purchasing into our skill. This will allow a cu
 4. Type `fact_pack` in **Reference Name** field.
 5. Assure that **One-Time Purchase** is selected as the product type.
 6. Click the blue **Create In-Skill Product** button.
+7. Under **Supported Languages** section, click on "+ Add new language" and select "English (US)"
 7. Fill all the metadata fields for `fact_pack` as follows:
 	- **Display Name:** Fact Pack
 	- **One Sentence Description:** Fact pack for the Ship Commander skill
