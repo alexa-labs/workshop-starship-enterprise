@@ -318,7 +318,7 @@ We created various layouts for you to use within this skill to save time. You ca
             "type": "ControlPanel",
             "position": "absolute",
             "top": "60vh"
-        },
+        }
     ]
 }
 ```
