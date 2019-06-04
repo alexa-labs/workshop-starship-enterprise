@@ -10,7 +10,7 @@
         {
             "name": "space-components",
             "version": "1.0",
-            "source": "https://raw.githubusercontent.com/alexa-labs/workshop-starship-enterprise/master/Step-2-Build-your-Display/space-components.json"
+            "source": "https://raw.githubusercontent.com/alexa-labs/workshop-starship-enterprise/master/Step-3-Pairing-your-VUI-and-GUI/space-components.json"
         }
     ],
     "resources": [],
