@@ -252,7 +252,6 @@ We'll now test your skill in the Developer Portal. Here you can test an entire c
 
 ### Congratulations! You have finished Task 1!
 
+Continue the workshop with [**Step 2 - Build your Display**](../Step-2-Build-your-Display/)
 
-## License
-
-This library is licensed under the Amazon Software License.
+Return to the [Workshop Main Page](..)

@@ -528,7 +528,7 @@ We have finished authoring our display screen for our skill, we now need to add 
 
 ### Congratulations! You have finished Task 2!
 
+Continue the workshop with [**Step 3 - Pairing your VUI and GUI**](../Step-3-Pairing-your-VUI-and-GUI/)
 
-## License
+Return to the [Workshop Main Page](..)
 
-This library is licensed under the Amazon Software License.

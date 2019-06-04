@@ -383,7 +383,4 @@ We will now test our skill again to assure that the ISP flow works and that our 
 
 ### Congratulations! You have finished Task 4!
 
-
-## License
-
-This library is licensed under the Amazon Software License.
+Return to the [Workshop Main Page](..)

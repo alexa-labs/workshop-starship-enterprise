@@ -39,12 +39,10 @@ This task will walk you through creating a simple skill that allows the customer
 ### Task 0.3: Skill Information
 
 1. Skill Name: Enter **Ship Commander**.
-2. Language: Select **English (U.S.).**
+2. Language: Select **English (US)**.
 3. Skill Type: Select **Custom Interaction Model**.
 4. Under, _choose a method to host your skill's backend resources_, select **Alexa-Hosted**. This will allow you to host your skill code within this Alexa Developer console. If you wish to host your code on AWS Lambda, or behind an HTTPS endpoint, you could select 'Provision your own'. However, for this workshop, we will be working strictly in the developer console.
 5. Scroll up and click the blue **Create Skill** button on the upper right.
-6. Select the **Start from scratch** template and click **Choose**.
-
 
 ### Task 0.4: Interaction Model
 
@@ -97,7 +95,7 @@ There are 11 handlers in this code. The first is the `LaunchRequestHandler` this
 Each handler has a `canHandle` and `handle`. The `canHandle` specifies the entrance criteria for executing the logic in `handle`.
 
 3. Click the **Save** button to save your code.
-4. Click the **Deploy** button to deploy your code to the live skill.
+4. Click the **Deploy** button to deploy your code to the development version of the skill.
 
 After the Save and Deploy is complete, you have attached your skill code to your interaction model.
 
@@ -115,7 +113,7 @@ We'll now test your skill in the Developer Portal. Here you can test an entire c
 
 ### Congratulations! You have finished Task 0!
 
+Continue the workshop with [**Step 1 - Add SSML, Sound Effects, and Amazon Polly**](../Step-1-Add-SSML-Sound-Effects-and-Amazon-Polly/)
 
-## License
+Return to the [Workshop Main Page](..)
 
-This library is licensed under the Amazon Software License.

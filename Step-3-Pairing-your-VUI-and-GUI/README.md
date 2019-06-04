@@ -398,9 +398,6 @@ We will now test our skill to assure that the APL documents appear in the skill 
 
 ### Congratulations! You have finished Task 3!
 
+Continue the workshop with [**Step 4 - Make Money with In-Skill Purchasing**](../Step-4-Make-Money-with-In-Skill-Purchasing/)
 
-## License
-
-This library is licensed under the Amazon Software License.
-
-
+Return to the [Workshop Main Page](..)
