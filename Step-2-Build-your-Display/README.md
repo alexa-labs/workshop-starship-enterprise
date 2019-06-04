@@ -289,7 +289,7 @@ We created various layouts for you to use within this skill to save time. You ca
         {
             "name": "space-components",
             "version": "1.0",
-            "source": "https://ask-samples-resources.s3.amazonaws.com/workshop-starship-enterprise/components/space-components.json"
+            "source": "https://raw.githubusercontent.com/alexa-labs/workshop-starship-enterprise/master/Step-2-Build-your-Display/space-components.json"
         }
     ],
     "resources": [],
