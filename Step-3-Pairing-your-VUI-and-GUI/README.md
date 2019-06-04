@@ -400,4 +400,4 @@ We will now test our skill to assure that the APL documents appear in the skill 
 
 Continue the workshop with [**Step 4 - Make Money with In-Skill Purchasing**](../Step-4-Make-Money-with-In-Skill-Purchasing/)
 
-Return to the [Workshop Main Page](..)
+Return to the [Workshop Main Page](../README.md)

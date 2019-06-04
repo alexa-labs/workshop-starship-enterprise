@@ -530,5 +530,5 @@ We have finished authoring our display screen for our skill, we now need to add 
 
 Continue the workshop with [**Step 3 - Pairing your VUI and GUI**](../Step-3-Pairing-your-VUI-and-GUI/)
 
-Return to the [Workshop Main Page](..)
+Return to the [Workshop Main Page](../README.md)
 

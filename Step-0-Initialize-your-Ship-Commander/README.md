@@ -115,5 +115,5 @@ We'll now test your skill in the Developer Portal. Here you can test an entire c
 
 Continue the workshop with [**Step 1 - Add SSML, Sound Effects, and Amazon Polly**](../Step-1-Add-SSML-Sound-Effects-and-Amazon-Polly/)
 
-Return to the [Workshop Main Page](..)
+Return to the [Workshop Main Page](../README.md)
 
