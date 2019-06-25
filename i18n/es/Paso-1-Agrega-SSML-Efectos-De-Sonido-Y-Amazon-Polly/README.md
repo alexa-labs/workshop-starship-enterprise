@@ -1,4 +1,4 @@
-# Agregar SSML, Efectos de Sonido y Voces de Amazon Polly
+# Agrega SSML, Efectos de Sonido y Voces de Amazon Polly
 
 
 En esta sección del taller, agregarás a tu skill nuevos sonidos y voces mediante: [Speech Synthesis Markup Language] (https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html), [Amazon Polly] (https://aws.amazon.com/polly/) y la [biblioteca de sonidos de ASK] (https://developer.amazon.com/docs/custom-skills/ask-soundlibrary.html). La integración de estos elementos promueve un diseño VUI (Voice User Interface) más envolvente e imaginativo. 
