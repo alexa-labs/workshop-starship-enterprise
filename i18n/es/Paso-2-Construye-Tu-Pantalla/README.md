@@ -24,7 +24,7 @@ Este Lab requiere:
 - Haber completado el [Paso 0 - Inicializa el Comando Espacial de tu nave] (./Paso-0-Inicializa-Comando-Espacial/)
 - Haber completao el [Paso 1 - Agregar SSML, Efectos de Sonido y Voces de Amazon Polly] (./Paso-1-Agrega-SSML-Efectos-De-Sonido-Y-Amazon-Polly/)
 
-## Objetivo: Creare una experiencia visual para tu skill
+## Objetivo: Crear una experiencia visual para tu skill
 
 La voz es la forma más natural de interacción y siempre debemos enforcarnos en que la experiencia de Voz sea única, sin embargo, cuando es posible, los elementos visuales pueden mejorar las interacciones con el servicios de voz de Alexa. Al combinar elementos visuales con experiencias de voz, los desarrolladores pueden ampliar las posibilidades de lo que pueden hacer sus skills. 
 
