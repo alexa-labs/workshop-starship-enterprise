@@ -31,7 +31,7 @@ La creación de interfaces de usuario de voz con APL utiliza algunos conceptos q
 
 En este paso, tomarás la pantalla que creaste en el paso anterior, la actualizarás para que sea dinámica según la interacción solicitada y la enviarás en una directiva con su respuesta de voz.
 
-### ACtividad 3.0: Revisar las interfaces soportadas 
+### Actividad 3.0: Revisar las interfaces soportadas 
 
 Has terminado de crear tus pantallas para la skill, ahora tienes que integrar el código APL a tu Skill. Lo primero que tienes que hacer es determinar si el dispositivo soporta APL.
 
@@ -410,6 +410,6 @@ Ahora vas a probar la skill para asegurarte que funcione correctamente y que cad
 
 ### Felicitaciones! Has terminado el paso tres!
 
-Son esto hemos llegado al final de este taller, espero haberte inspirado a crear nuevas skills y saludos!
+Con esto hemos llegado al final de este taller, espero haberte inspirado a crear nuevas skills y saludos!
 
-Return to the [Workshop Main Page](../README.md)
+Regresa a la [Página Principal](../README.md)
