@@ -1,7 +1,7 @@
 # Agrega SSML, Efectos de Sonido y Voces de Amazon Polly
 
 
-En esta sección del taller, agregarás a tu skill nuevos sonidos y voces mediante: [Speech Synthesis Markup Language] (https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html), [Amazon Polly] (https://aws.amazon.com/polly/) y la [biblioteca de sonidos de ASK] (https://developer.amazon.com/docs/custom-skills/ask-soundlibrary.html). La integración de estos elementos promueve un diseño VUI (Voice User Interface) más envolvente e imaginativo. 
+En esta sección del taller, agregarás a tu skill nuevos sonidos y voces mediante: [Speech Synthesis Markup Language](https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html), [Amazon Polly](https://aws.amazon.com/polly/) y la [biblioteca de sonidos de ASK](https://developer.amazon.com/docs/custom-skills/ask-soundlibrary.html). La integración de estos elementos promueve un diseño VUI (Voice User Interface) más envolvente e imaginativo. 
 
 ## Objetivos
 
@@ -20,7 +20,7 @@ Este Lab requiere:
 
 - Acceso a un equipo de computo con acceso a Wi-Fi, ejecutando Microsoft Windows, Mac OS X, o Linux (Ubuntu, SuSE, or RedHat).
 - Un navegador de Internet como Chrome, Firefox o IE9 (Versiones anteriores no están soportadas)
-- Haber completado el [Paso 0 - Inicializa el Comando Espacial de tu nave] (./Paso-0-Inicializa-Comando-Espacial/)
+- Haber completado el [Paso 0 - Inicializa el Comando Espacial de tu nave](./Paso-0-Inicializa-Comando-Espacial/)
 
 
 
