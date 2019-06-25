@@ -1,4 +1,4 @@
-# Construyendo La Computadora Espacial Enterprise
+# Construyendo la Computadora de Navegación Espacial Enterprise - Comando Espacial
 
 En una gran cantidad de historias de ciencia ficción muestran que las interfaces de voz son el futuro. Este taller te mostrará cómo hacer realidad esa ciencia ficción. Desarrollar esta skill le enseñará los temas avanzados necesarios para crear interfaces de voz. Aprenderás cómo desarrollar skills de Alexa, cómo diseñar experiencias conversacionales.
 
