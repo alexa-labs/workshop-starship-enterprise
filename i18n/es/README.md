@@ -15,7 +15,7 @@ Este taller se divide en 5 secciones. Cada sección se basa en la anterior y se 
 
 - [Paso 2 - Construye tu pantalla](./Paso-2-Construye-Tu-Pantalla/): Con APL (Alexa Presentation Language), puedes desarrollar plantillas visuales para las skills y diseñarlas de la forma visual que deseas. Permitirás a tus usuarios interactuar con sus pantallas en dispositivos multimodales.
 
-- [Paso 3 - Agregar la GUI a la VUI](./Paso-3-Agregar-La-GUI-A-La-VUI/): Es importante mantener una experiencia #VoiceFirst en tu Skill, en este paso aprenderás como agregar la experiencia visual multimodal a dispositivos con pantalla, y mantener la experiencia de Voz adecuada.
+- [Paso 3 - Agregar la GUI a la VUI](./Paso-3-Agregar-la-GUI-a-la-VUI/): Es importante mantener una experiencia #VoiceFirst en tu Skill, en este paso aprenderás como agregar la experiencia visual multimodal a dispositivos con pantalla, y mantener la experiencia de Voz adecuada.
 
 
 ## Licencia
