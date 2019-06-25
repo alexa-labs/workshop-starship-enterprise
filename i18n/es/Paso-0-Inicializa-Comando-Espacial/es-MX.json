@@ -1,0 +1,101 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "comando espacial",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnalyzeShipStatusIntent",
+                    "slots": [],
+                    "samples": [
+                        "analiza el status de la nave",
+                        "analizar status",
+                        "checa status de la nave",
+                        "dime sobre el status de la nave",
+                        "que está pasando con la nave",
+                        "cual es el status de la nave"
+                    ]
+                },
+                {
+                    "name": "AttackIntent",
+                    "slots": [],
+                    "samples": [
+                        "ataca",
+                        "ataca al enemigo",
+                        "envía un ataque",
+                        "inicia ataque",
+                        "dispara ataque"
+                    ]
+                },
+                {
+                    "name": "BeamMeUpIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "SetHyperDriveIntent",
+                    "slots": [],
+                    "samples": [
+                        "hiper espacio",
+                        "enciende hiper espacio",
+                        "habilita hiper espacio",
+                        "viaja al hiper espacio",
+                        "configura hiperespacio",
+                        "velocidad de hiper espacio",
+                        "volemos al hiper espacio"
+                    ]
+                },
+                {
+                    "name": "CaptainsLogIntent",
+                    "slots": [],
+                    "samples": [
+                        "lee la bitácora del capitán",
+                        "checa la bitácora del capitán",
+                        "bitácora capitán",
+                        "lee bitácora",
+                        "checa bitácora",
+                        "bitácora"
+                    ]
+                },
+                {
+                    "name": "DefendIntent",
+                    "slots": [],
+                    "samples": [
+                        "defensa",
+                        "activa defensa",
+                        "defiende",
+                        "habilita escudos",
+                        "enciende escudos"
+                    ]
+                },
+                {
+                    "name": "ReturnHomeIntent",
+                    "slots": [],
+                    "samples": [
+                        "vamos a casa",
+                        "ve a casa",
+                        "regresa a casa",
+                        "llévame a casa",
+                        "regresar a casa"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
