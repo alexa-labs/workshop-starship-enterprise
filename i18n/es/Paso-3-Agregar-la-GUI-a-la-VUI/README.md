@@ -8,7 +8,7 @@ Después de completar este taller, tu podrás:
 
 - Utilizar los documentos APL que creaste en el código de tu skill
 - Mostrar tus pantallas de forma dinámica utilizando comando de voz
-- Manjar eventos de la pantalla en tu servicio de voz
+- Manejar eventos de la pantalla en tu servicio de voz
 
 
 ## Requisitos Previos
