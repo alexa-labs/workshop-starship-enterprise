@@ -19,4 +19,4 @@ Este taller se divide en 5 secciones. Cada sección se basa en la anterior y se 
 
 
 ## Licencia
-Esta librería está bajo la licencia de [Amazon Software License] (https://aws.amazon.com/asl/)
+Esta librería está bajo la licencia de [Amazon Software License](https://aws.amazon.com/asl/)
