@@ -76,7 +76,7 @@ if (supportsAPL(handlerInput)) {
 4. Hemos agregado un documento APL a la skill y lo estamos enviando como respuesta.  Haz click en **Save** y **Deploy** para guardar y desplegar tu código respectivamente.
 
 
-### Actividad 3.2: Enviar una fuente de datos (datasource)junto con la directiva APL.
+### Actividad 3.2: Enviar una fuente de datos (datasource) junto con la directiva APL.
 
 Hemos enviado una pantalla que tiene sentido para el `LaunchRequest` and `ReturnHomeIntent`, sin embargo si queremos una experiencia mas envolvente debemos considerar como cambiar la pantalla en función a la petición del usuario.
 
