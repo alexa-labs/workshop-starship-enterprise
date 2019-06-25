@@ -554,6 +554,6 @@ Has terminado de crear las pantallas para tu skill, ahora solo necesitas agregar
 
 ### ¡Felicitaciones! Has terminado el paso 2.
 
-Ahora continúa el taller con el siguiente [**Paso 2 - Construye tu pantalla**](../Paso-2-Construye-Tu-Pantalla/)
+Ahora continúa el taller con el siguiente [Paso 3 - Agregar la GUI a la VUI](../Paso-3-Agregar-la-GUI-a-la-VUI/)
 
 Regresa a la [Página Principal](../README.md)
