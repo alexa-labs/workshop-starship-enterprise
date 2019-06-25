@@ -1,6 +1,6 @@
 # Construyendo la Computadora de Navegación Espacial
 
-En una gran cantidad de historias de ciencia ficción se muestra que las interfaces de voz son el futuro. Este taller te mostrará cómo hacer realidad esa ciencia ficción. Desarrollar una skill llamada: Comando Espacial. Esta skill le enseñará los temas avanzados necesarios para crear interfaces de voz. Aprenderás cómo desarrollar skills de Alexa, cómo diseñar experiencias conversacionales.
+En una gran cantidad de historias de ciencia ficción se muestra que las interfaces de voz son el futuro. Este taller te mostrará cómo hacer realidad esa ciencia ficción. Juntos desarrollaremos una skill llamada: Comando Espacial. Esta skill le enseñará los temas avanzados necesarios para crear interfaces de voz. Aprenderás cómo desarrollar skills de Alexa, cómo diseñar experiencias conversacionales.
 
 El usuario abre la skill y selecciona a qué área de la nave espacial les gustaría mandar. Alexa responde a sus comandos, actualiza las pantallas y responde con un audio avanzado de SSML (Speech Synthesis Markup Language) y Amazon Polly.
 
