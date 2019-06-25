@@ -119,7 +119,7 @@ Ahora realizarás las pruebas en el portal de desarrollo. Aquí puedes probar to
 
 ### ¡Felicitaciones! Has terminado el paso 0.
 
-Ahora continúa el taller con el siguiente [Paso 1 - Agrega SSML, efectos de sonido y Amazon Polly](./Paso-1-Agrega-SSML-Efectos-De-Sonido-Y-Amazon-Polly/)
+Ahora continúa el taller con el siguiente [Paso 1 - Agrega SSML, efectos de sonido y Amazon Polly](../Paso-1-Agrega-SSML-Efectos-De-Sonido-Y-Amazon-Polly/)
 
 Regresa a la [Página Principal](../README.md)
 
