@@ -38,7 +38,7 @@ En este paso, crearás una pantalla de visualización flexible para adaptarla a 
 Primero te tienes que asegurar que la interfaz APL está soportada en tu skill.
 
 1. En el **Developer Portal** , selecciona el tab de **Build** en el menú de arriba.
-2. Haz click en  **Interfaces** en el manu de la izquierda.
+2. Haz click en  **Interfaces** en el menú de la izquierda.
 3. Mueve el cursos hacia abajo y haz para encender el interruptor que dice **Alexa Presentation Language**. Esto te permitirá usar APL en tu skill.
 4. Haz click en el botón **Save Interfaces** en la parte de arriba.
 5. Una vez que las interfaces estén guardadas, haz click en **Build Model** para guardar tu modelo.
