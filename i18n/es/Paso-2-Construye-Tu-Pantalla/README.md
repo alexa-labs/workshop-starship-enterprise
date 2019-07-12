@@ -67,8 +67,8 @@ En la primer pantalla, estamos mostrando un video que simula la experiencia de e
 Primero, construiremos el dispositivo circular.
 
 1. Selecciona la opción **Start from Scratch** 
-2. En el pane de arriba, es posible cambiar el tipo de dispositivo, selecciona **Small Hub**, botón que muestra un dispositivo circular y de pronto la herramienta de creación muestra una pantalla circular.
-3. Selecciona el interruptor que está en medio. Esto cambiará la pantalla y se mostrará un código en json igual al que se muestra a continuación
+2. En el panel de arriba, es posible cambiar el tipo de dispositivo, selecciona **Small Hub**, botón que muestra un dispositivo circular y de pronto la herramienta de creación muestra una pantalla circular.
+3. Selecciona el botón que muestra las llaves {}. Esto cambiará la pantalla y se mostrará un código en json igual al que se muestra a continuación
 
 ```
 {
