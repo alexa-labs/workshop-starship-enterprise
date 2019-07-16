@@ -59,7 +59,7 @@ Fig. Ejemplo de pantalla en landscape.
 
 ![Landscape display](./resources/round.png)
 
-Fig. ejemplo de pantalla circulas
+Fig. ejemplo de pantalla circular
 
 
 En la primer pantalla, estamos mostrando un video que simula la experiencia de estar en el espacio, para la experiencia rectangular podemos agregar un panel de la nave con el que el usuario puede interactuar tocando la pantalla y enviando eventos.
