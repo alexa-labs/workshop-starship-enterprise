@@ -55,7 +55,6 @@ const LaunchRequestHandler = {
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(HELP)
-      .withSimpleCard('Ship Commander', speechText)
       .getResponse();
   },
 };
