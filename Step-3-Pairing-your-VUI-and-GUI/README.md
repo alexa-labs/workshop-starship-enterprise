@@ -43,7 +43,7 @@ This helper function determines if the following handlerInput can support a resp
 
 ### Task 3.1: Add the APL document to your skill
 
-We will now add an APL directive to the LaunchRequest response. A directive specifies how a compiler (or other translator) should process its input. In this case, our directive type will be `Alexa.Presentation.APL.RenderDocument`, indicating to interpret the input as a document to render as APL, and our input will be our `launchrequest.json` document.
+We will now add an APL directive to the LaunchRequest response. A directive specifies how a compiler (or other translator) should process its input. In this case, our directive type will be `Alexa.Presentation.APL.RenderDocument`, indicating to interpret the input as a document to render as APL, and our input will be our `launch.json` document.
 
 1. Scroll up to the `LaunchRequest`
 2. **Add** an if statement to determine if the customer's device has a display using the **supportsAPL** function.
