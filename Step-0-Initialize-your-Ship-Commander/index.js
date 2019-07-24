@@ -22,9 +22,10 @@ const LaunchRequestHandler = {
         && handlerInput.requestEnvelope.request.intent.name === 'ReturnHomeIntent');
   },
   handle(handlerInput) {
-    const speechText = "Welcome to the Ship Commander skill. You are the captain of our space exploration. "
-    + "To get started you can say things like, analyze the ship status or read the captains log. "
-    + "Time to embark on an adventure into the unknown!";
+    const speechText = "Welcome Captain. You are now in command of the Starship YummyFries, in it's "
+    + "continuing mission to seek out new sources of french fries and new ways to cook them. "
+    + "To get started, you can say things like, analyze the ship status or read the captains log. "
+    + "Time to embark on another adventure into the unknown!";
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -74,7 +75,7 @@ const BeamMeUpIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'BeamMeUpIntent';
   },
   handle(handlerInput) {
-    const speechText = "Prepare to beam. Engage.";
+    const speechText = "Initializing transport process. Transporting... Wait... I forgot to beam up your clothes... One second, Captain... Beam process successful!";
 
     return handlerInput.responseBuilder
       .speak(speechText)

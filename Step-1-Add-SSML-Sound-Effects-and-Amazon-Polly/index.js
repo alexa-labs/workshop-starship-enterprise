@@ -76,10 +76,7 @@ const BeamMeUpIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'BeamMeUpIntent';
   },
   handle(handlerInput) {
-    const speechText = "<voice name='Amy'>Prepare to beam "
-      + "<audio src='soundbank://soundlibrary/scifi/amzn_sfx_scifi_engines_on_large_01'/> "
-      + "Engage</voice> "
-      + "<audio src='soundbank://soundlibrary/scifi/amzn_sfx_scifi_engines_on_short_burst_01'/>";
+    const speechText = "Initializing transport process. Transporting... <audio src='soundbank://soundlibrary/alarms/buzzers/buzzers_06'/> Wait... I forgot to beam up your clothes... One second, Captain... <audio src='soundbank://soundlibrary/alarms/beeps_and_bloops/boing_02'/> Beam process successful!";
 
     return handlerInput.responseBuilder
       .speak(speechText)
