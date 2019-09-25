@@ -29,7 +29,7 @@ ASK admite skills simples orientadas a comandos, por ejemplo: "Alexa, pide a "Co
 
 Este laboratorio lo guiará para crear una Skill simple que permite al cliente interactuar con las funciones de una nave espacial. Usarás el ASK para aprender los fundamentos de cómo construir una experiencia de voz para tus usuarios.
 
-### Actividad 0.1: Crea una cuenta en delveloper.amazon.com (o ingresa a tu cuenta existente)
+### Actividad 0.1: Crea una cuenta en developer.amazon.com (o ingresa a tu cuenta existente)
 
 1. Navega al Portal de Desarrollo de Amazon en [https://developer.amazon.com/alexa](https://developer.amazon.com/alexa).
 2. Haz click en **Sign In** en la parte superior derecha para crear una cuenta. Es muy importante que selecciones la ubicación adecuada, si estás en México, selecciona México, si estás en España, selecciona España, recuerda que tenemos programas de recompensas para desarrolladores y tener la información incorrecta puede resultar en que te quede fuera de alguno de estos programas.
